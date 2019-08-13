@@ -9,4 +9,8 @@
 import Foundation
 
 class MainPresenter {
+    
+    func getUser() {
+        UserRequest.getUsers()
+    }
 }

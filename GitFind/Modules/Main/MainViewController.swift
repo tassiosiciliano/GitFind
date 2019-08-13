@@ -14,12 +14,14 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - PROPERTIES
+    var presenter = MainPresenter()
     var userList: [User] = []
     
     // MARK: - LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        presenter.getUser()
     }
     
     // MARK: - METHODS
