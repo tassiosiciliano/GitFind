@@ -10,7 +10,17 @@ import Foundation
 
 class MainPresenter {
     
+    var viewController: MainViewController?
+    
+    var userList: [User] = []
+    
     func getUser() {
-        UserRequest.getUsers()
+        UserRequest.getUsers(success: { users in
+            print(users)
+            self.userList = users
+            self.viewController?.tableView.reloadData()
+        }) {
+            print("Error")
+        }
     }
 }

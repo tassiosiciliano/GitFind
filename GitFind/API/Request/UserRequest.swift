@@ -11,21 +11,18 @@ import Alamofire
 
 class UserRequest {
     
-    static func getUsers() {
+    static func getUsers(success: @escaping (_ user: [User]) -> Void, failure: @escaping () -> Void) {
         let url = "https://api.github.com/search/users?q=ios"
         Alamofire.request(url, method: .get).responseJSON {
             response in
             if response.result.isSuccess {
-                print("... SUCESSO ✅ ...")
+                print("... SUCESS ...")
                 if let userResponse = response.data {
-                    guard let users = try? JSONDecoder().decode(User.self, from: userResponse) else {
-                        print("Error: Couldn't decode data into User")
-                        return
-                    }
-                    print(users)
+                    guard let users = try? JSONDecoder().decode(User.self, from: userResponse) else { return }
+                    success([users])
                 }
             } else {
-                print("Erro")
+                print("Error")
             }
         }
     }

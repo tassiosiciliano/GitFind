@@ -14,14 +14,25 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - PROPERTIES
-    var presenter = MainPresenter()
-    var userList: [User] = []
+    var presenter: MainPresenter
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.presenter = MainPresenter()
+        super.init(coder: aDecoder)
+        presenter.viewController = self
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        self.presenter = MainPresenter()
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        presenter.viewController = self
+    }
     
     // MARK: - LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        presenter.getUser()
+        self.presenter.getUser()
     }
     
     // MARK: - METHODS
@@ -36,7 +47,7 @@ class MainViewController: UIViewController {
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userList.count
+        return self.presenter.userList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
