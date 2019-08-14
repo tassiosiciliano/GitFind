@@ -7,5 +7,6 @@ target 'GitFind' do
 
   # Pods for GitFind
   pod 'Alamofire'
+  pod 'Kingfisher'
 
 end
