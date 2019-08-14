@@ -52,8 +52,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = MainTableViewCell.dequeueCell(from: tableView)
-        cell.nameLabel.text = "\(indexPath.row)"
-        cell.avatarImage.image = UIImage(named: "Octocat")
+        cell.setupCell(withUser: self.presenter.userList[indexPath.row])
         return cell
     }
 }

@@ -15,8 +15,7 @@ class MainPresenter {
     var userList: [User] = []
     
     func getUser() {
-        UserRequest.getUsers(success: { users in
-            print(users)
+        UserRequest.getUsers(success: { (users) in
             self.userList = users
             self.viewController?.tableView.reloadData()
         }) {

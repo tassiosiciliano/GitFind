@@ -32,4 +32,9 @@ class MainTableViewCell: UITableViewCell {
         avatarImage.layer.cornerRadius = avatarImage.frame.height / 2
         avatarImage.clipsToBounds = true
     }
+    
+    func setupCell(withUser user: User) {
+        nameLabel.text = user.login
+        avatarImage.image = UIImage(named: "Octocat")
+    }
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,7 @@
 		B841575222FE917F0065B5F4 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841575122FE917F0065B5F4 /* HTTPMethod.swift */; };
 		B841575422FE925B0065B5F4 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841575322FE925B0065B5F4 /* UserRequest.swift */; };
 		B841575622FE92C20065B5F4 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841575522FE92C20065B5F4 /* UserResponse.swift */; };
+		B89C10652303A2E20025246F /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C10642303A2E20025246F /* Repo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		B841575122FE917F0065B5F4 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		B841575322FE925B0065B5F4 /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
 		B841575522FE92C20065B5F4 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		B89C10642303A2E20025246F /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		CD2082155BE4CEBB88EAC075 /* Pods-GitFind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitFind.release.xcconfig"; path = "Target Support Files/Pods-GitFind/Pods-GitFind.release.xcconfig"; sourceTree = "<group>"; };
 		E532BFF76B7F16899ECDBB90 /* Pods_GitFind.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitFind.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				B841573622FE5E310065B5F4 /* User.swift */,
+				B89C10642303A2E20025246F /* Repo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,7 +200,6 @@
 				1B53C42BDC64626A64D97CBB /* Pods-GitFind.debug.xcconfig */,
 				CD2082155BE4CEBB88EAC075 /* Pods-GitFind.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -324,6 +326,7 @@
 				B841575422FE925B0065B5F4 /* UserRequest.swift in Sources */,
 				B841574422FE61A00065B5F4 /* MainViewController.swift in Sources */,
 				B841574F22FE75360065B5F4 /* ReusableCells.swift in Sources */,
+				B89C10652303A2E20025246F /* Repo.swift in Sources */,
 				B841574922FE69B80065B5F4 /* MainTableViewCell.swift in Sources */,
 				B841575622FE92C20065B5F4 /* UserResponse.swift in Sources */,
 			);

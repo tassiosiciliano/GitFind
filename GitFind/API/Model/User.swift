@@ -10,42 +10,21 @@ import Foundation
 
 // MARK: - User
 struct User: Codable {
-    let totalCount: Int
-    let incompleteResults: Bool
-    let items: [Item]
-    
-    enum CodingKeys: String, CodingKey {
-        case totalCount = "total_count"
-        case incompleteResults = "incomplete_results"
-        case items
-    }
-}
-
-// MARK: - Item
-struct Item: Codable {
     let login: String
     let id: Int
     let nodeID: String
     let avatarURL: String
     let gravatarID: String
-    let url: String
-    let htmlURL: String
-    let followersURL: String
-    let followingURL: String
-    let gistsURL: String
-    let starredURL: String
-    let subscriptionsURL: String
-    let organizationsURL: String
-    let reposURL: String
+    let url, htmlURL, followersURL: String
+    let followingURL, gistsURL, starredURL: String
+    let subscriptionsURL, organizationsURL, reposURL: String
     let eventsURL: String
     let receivedEventsURL: String
     let type: TypeEnum
     let siteAdmin: Bool
-    let score: Double
     
     enum CodingKeys: String, CodingKey {
-        case login
-        case id
+        case login, id
         case nodeID = "node_id"
         case avatarURL = "avatar_url"
         case gravatarID = "gravatar_id"
@@ -62,10 +41,10 @@ struct Item: Codable {
         case receivedEventsURL = "received_events_url"
         case type
         case siteAdmin = "site_admin"
-        case score
     }
 }
 
 enum TypeEnum: String, Codable {
+    case organization = "Organization"
     case user = "User"
 }
