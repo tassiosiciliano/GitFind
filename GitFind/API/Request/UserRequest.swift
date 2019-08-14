@@ -19,7 +19,6 @@ class UserRequest {
             if let error = json.error {
                 print("Error: " + error.localizedDescription)
             } else if let user = try? JSONDecoder().decode([User].self, from: json.data!) {
-                print(user)
                 success(user)
             }
         }
