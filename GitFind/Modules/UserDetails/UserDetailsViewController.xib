@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserDetailsViewController" customModule="GitFind" customModuleProvider="target">
             <connections>
+                <outlet property="emptyStateLabel" destination="UDo-Mc-TUQ" id="Itx-Cq-xIM"/>
                 <outlet property="tableView" destination="dDf-AA-IMf" id="cii-dH-VEm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -25,12 +26,44 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDo-Mc-TUQ">
+                    <rect key="frame" x="16" y="418.5" width="382" height="59.5"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Ops!">
+                            <attributes>
+                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="26" name="Arial-BoldMT"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" ">
+                            <attributes>
+                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="26" name=".SFNSDisplay-Bold"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="There is no repo here...">
+                            <attributes>
+                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="26" name=".SFNSDisplay"/>
+                                <font key="NSOriginalFont" size="26" name=".SFNSDisplay"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UDo-Mc-TUQ" secondAttribute="trailing" constant="16" id="0Ur-8c-B7i"/>
                 <constraint firstItem="dDf-AA-IMf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2jb-Dt-Slg"/>
                 <constraint firstItem="dDf-AA-IMf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8OV-5F-yZB"/>
+                <constraint firstItem="UDo-Mc-TUQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="EdJ-ny-aRh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dDf-AA-IMf" secondAttribute="trailing" id="MTw-3h-df4"/>
+                <constraint firstItem="UDo-Mc-TUQ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Tbd-C0-o8j"/>
+                <constraint firstItem="UDo-Mc-TUQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aoc-k4-bXH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dDf-AA-IMf" secondAttribute="bottom" id="cWl-Rf-SMm"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

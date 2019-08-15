@@ -12,6 +12,7 @@ class UserDetailsViewController: UIViewController {
     
     // MARK: - OUTLETS
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var emptyStateLabel: UILabel!
     
     // MARK: - PROPERTIES
     var presenter: UserDetailsPresenter
@@ -55,6 +56,12 @@ class UserDetailsViewController: UIViewController {
         let navigation = navigationController?.navigationBar
         navigation?.tintColor = .black
         self.title = "Repositories"
+        self.emptyStateLabel.isHidden = true
+    }
+    
+    func showEmptyState() {
+        tableView.isHidden = true
+        emptyStateLabel.isHidden = false
     }
 }
 
