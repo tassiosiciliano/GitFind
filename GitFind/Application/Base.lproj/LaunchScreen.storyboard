@@ -18,24 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="octopus" translatesAutoresizingMaskIntoConstraints="NO" id="43k-5p-hdo">
+                                <rect key="frame" x="-305" y="173" width="1024" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Km4-hg-jLW"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitFind" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEU-9v-YIs">
                                 <rect key="frame" x="147" y="423" width="120.5" height="50.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="42"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="GEU-9v-YIs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="2aS-zI-46U"/>
-                            <constraint firstItem="GEU-9v-YIs" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="tX1-Rv-Wbw"/>
+                            <constraint firstItem="GEU-9v-YIs" firstAttribute="top" secondItem="43k-5p-hdo" secondAttribute="bottom" id="2hi-Qk-BLD"/>
+                            <constraint firstItem="43k-5p-hdo" firstAttribute="centerX" secondItem="GEU-9v-YIs" secondAttribute="centerX" id="Hky-Cw-P1f"/>
+                            <constraint firstItem="GEU-9v-YIs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NOL-Ev-qxA"/>
+                            <constraint firstItem="GEU-9v-YIs" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="idU-hQ-29o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="octopus" width="1024" height="1024"/>
+    </resources>
 </document>
