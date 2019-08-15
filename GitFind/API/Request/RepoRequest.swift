@@ -20,7 +20,6 @@ class RepoRequest {
                 if let error = response.error {
                     print("Error: " + error.localizedDescription)
                 } else if let repo = try? JSONDecoder().decode([Repo].self, from: response.data!) {
-                    print(repo)
                     success(repo)
                 }
             }

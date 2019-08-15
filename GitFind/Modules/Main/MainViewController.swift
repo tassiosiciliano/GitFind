@@ -64,7 +64,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let repoUrl = self.presenter.userList[indexPath.row].reposURL
-        print("\n\n REPOS URL: \(repoUrl)\n\n")
         tableView.deselectRow(at: indexPath, animated: true)
         self.navigationController?.pushViewController(UserDetailsViewController(url: repoUrl)!, animated: true)
     }
