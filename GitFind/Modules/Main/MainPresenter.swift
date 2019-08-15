@@ -10,10 +10,11 @@ import Foundation
 
 class MainPresenter {
     
+    // MARK: - PROPERTIES
     var viewController: MainViewController?
-    
     var userList: [User] = []
     
+    // MARK: - METHODS
     func getUser() {
         UserRequest.getUsers(success: { (users) in
             self.userList = users

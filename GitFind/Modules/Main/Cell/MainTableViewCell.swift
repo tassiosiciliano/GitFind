@@ -27,10 +27,8 @@ class MainTableViewCell: UITableViewCell {
     }
     
     func roundImage() {
-        avatarImage.layer.masksToBounds = false
-        avatarImage.layer.borderWidth = 1
-        avatarImage.layer.borderColor = UIColor.black.cgColor
         avatarImage.layer.cornerRadius = avatarImage.frame.height / 2
+        avatarImage.layer.masksToBounds = false
         avatarImage.clipsToBounds = true
     }
     

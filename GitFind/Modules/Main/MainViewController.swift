@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     // MARK: - PROPERTIES
     var presenter: MainPresenter
     
+    // MARK: - INIT
     required init?(coder aDecoder: NSCoder) {
         self.presenter = MainPresenter()
         super.init(coder: aDecoder)
@@ -32,6 +33,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupNavigation()
         self.presenter.getUser()
     }
     
@@ -41,9 +43,13 @@ class MainViewController: UIViewController {
         tableView.dataSource = self
         MainTableViewCell.registerNib(for: tableView)
     }
+    
+    func setupNavigation() {
+        self.title = "Users"
+    }
 }
 
-// MARK: - EXTENSIONS
+// MARK: - TABLEVIEW DELEGATE AND DATASOURCE
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,5 +60,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = MainTableViewCell.dequeueCell(from: tableView)
         cell.setupCell(withUser: self.presenter.userList[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let repoUrl = self.presenter.userList[indexPath.row].reposURL
+        print("\n\n REPOS URL: \(repoUrl)\n\n")
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.navigationController?.pushViewController(UserDetailsViewController(url: repoUrl)!, animated: true)
     }
 }

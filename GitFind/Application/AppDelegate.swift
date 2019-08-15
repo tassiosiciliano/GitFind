@@ -16,8 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         let main = MainViewController(nibName: "MainViewController", bundle: nil)
-        main.title = "Users"
-        
         let navigationController = UINavigationController(rootViewController: main)
         
         window = UIWindow(frame: UIScreen.main.bounds)
