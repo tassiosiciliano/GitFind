@@ -23,4 +23,13 @@ class MainPresenter {
             print("Error")
         }
     }
+    
+    func getUserByLogin(login: String) {
+        UserRequest.getUserByLogin(login: login, success: { (user) in
+            self.userList = user
+            self.viewController?.tableView.reloadData()
+        }) {
+            print("Error")
+        }
+    }
 }

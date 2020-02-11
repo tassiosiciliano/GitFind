@@ -24,4 +24,21 @@ class UserRequest {
             }
         }
     }
+    
+    static func getUserByLogin(login: String?,
+                               success: @escaping (_ user: [User]) -> Void,
+                               failure: @escaping () -> Void) {
+        
+        if let userLogin = login {
+            let url = "https://api.github.com/users/\(userLogin)"
+            
+            Alamofire.request(url, method: .get).responseJSON { (responseData: DataResponse <Any>) in
+                if let error = responseData.error {
+                    print("Error: " + error.localizedDescription)
+                } else if let user = try? JSONDecoder().decode([User].self, from: responseData.data!) {
+                    success(user)
+                }
+            }
+        }
+    }
 }
