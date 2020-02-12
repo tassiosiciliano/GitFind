@@ -11,7 +11,7 @@
 		B841572022FE5C510065B5F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841571F22FE5C510065B5F4 /* AppDelegate.swift */; };
 		B841572722FE5C520065B5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B841572622FE5C520065B5F4 /* Assets.xcassets */; };
 		B841572A22FE5C520065B5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B841572822FE5C520065B5F4 /* LaunchScreen.storyboard */; };
-		B841573722FE5E310065B5F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841573622FE5E310065B5F4 /* User.swift */; };
+		B841573722FE5E310065B5F4 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841573622FE5E310065B5F4 /* Users.swift */; };
 		B841573E22FE605A0065B5F4 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841573D22FE605A0065B5F4 /* MainPresenter.swift */; };
 		B841574422FE61A00065B5F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841574222FE61A00065B5F4 /* MainViewController.swift */; };
 		B841574522FE61A00065B5F4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B841574322FE61A00065B5F4 /* MainViewController.xib */; };
@@ -19,6 +19,7 @@
 		B841574A22FE69B80065B5F4 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B841574822FE69B80065B5F4 /* MainTableViewCell.xib */; };
 		B841574F22FE75360065B5F4 /* ReusableCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841574E22FE75360065B5F4 /* ReusableCells.swift */; };
 		B841575422FE925B0065B5F4 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841575322FE925B0065B5F4 /* UserRequest.swift */; };
+		B889CCF223F38E9800780413 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B889CCF123F38E9800780413 /* User.swift */; };
 		B89C10652303A2E20025246F /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C10642303A2E20025246F /* Repo.swift */; };
 		B89C10672304BA060025246F /* RepoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C10662304BA060025246F /* RepoRequest.swift */; };
 		B89C106B2304D1B80025246F /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C10692304D1B80025246F /* UserDetailsViewController.swift */; };
@@ -35,7 +36,7 @@
 		B841572622FE5C520065B5F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B841572922FE5C520065B5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B841572B22FE5C520065B5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B841573622FE5E310065B5F4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B841573622FE5E310065B5F4 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		B841573D22FE605A0065B5F4 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		B841574222FE61A00065B5F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B841574322FE61A00065B5F4 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -43,6 +44,7 @@
 		B841574822FE69B80065B5F4 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		B841574E22FE75360065B5F4 /* ReusableCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCells.swift; sourceTree = "<group>"; };
 		B841575322FE925B0065B5F4 /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
+		B889CCF123F38E9800780413 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B89C10642303A2E20025246F /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		B89C10662304BA060025246F /* RepoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRequest.swift; sourceTree = "<group>"; };
 		B89C10692304D1B80025246F /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
@@ -135,8 +137,9 @@
 		B841573522FE5DFE0065B5F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B841573622FE5E310065B5F4 /* User.swift */,
+				B841573622FE5E310065B5F4 /* Users.swift */,
 				B89C10642303A2E20025246F /* Repo.swift */,
+				B889CCF123F38E9800780413 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,7 +336,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B841573722FE5E310065B5F4 /* User.swift in Sources */,
+				B889CCF223F38E9800780413 /* User.swift in Sources */,
+				B841573722FE5E310065B5F4 /* Users.swift in Sources */,
 				B89C10672304BA060025246F /* RepoRequest.swift in Sources */,
 				B89C106B2304D1B80025246F /* UserDetailsViewController.swift in Sources */,
 				B841572022FE5C510065B5F4 /* AppDelegate.swift in Sources */,

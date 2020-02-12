@@ -12,7 +12,8 @@ class MainPresenter {
     
     // MARK: - PROPERTIES
     var viewController: MainViewController?
-    var userList: [User] = []
+    var userList: [Users] = []
+    var user: Users?
     
     // MARK: - METHODS
     func getUser() {
@@ -26,7 +27,7 @@ class MainPresenter {
     
     func getUserByLogin(login: String) {
         UserRequest.getUserByLogin(login: login, success: { (user) in
-            self.userList = user
+            self.user = user
             self.viewController?.tableView.reloadData()
         }) {
             print("Error")

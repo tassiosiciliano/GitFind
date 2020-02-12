@@ -2,27 +2,14 @@
 //  User.swift
 //  GitFind
 //
-//  Created by Tassio Siciliano on 11/02/20.
-//  Copyright © 2020 Tassio Siciliano. All rights reserved.
+//  Created by Tassio Siciliano on 09/08/19.
+//  Copyright © 2019 Tassio Siciliano. All rights reserved.
 //
 
 import Foundation
 
-// MARK: - User
-struct User: Codable {
-    let totalCount: Int?
-    let incompleteResults: Bool?
-    let items: [Item]
-
-    enum CodingKeys: String, CodingKey {
-        case totalCount = "total_count"
-        case incompleteResults = "incomplete_results"
-        case items
-    }
-}
-
-// MARK: - Item
-struct Item: Codable {
+// MARK: - Users
+struct Users: Codable {
     let login: String?
     let id: Int?
     let nodeID: String?
@@ -33,10 +20,9 @@ struct Item: Codable {
     let subscriptionsURL, organizationsURL, reposURL: String?
     let eventsURL: String?
     let receivedEventsURL: String?
-    let type: String?
+    let type: TypeEnum?
     let siteAdmin: Bool?
-    let score: Int?
-
+    
     enum CodingKeys: String, CodingKey {
         case login, id
         case nodeID = "node_id"
@@ -55,6 +41,10 @@ struct Item: Codable {
         case receivedEventsURL = "received_events_url"
         case type
         case siteAdmin = "site_admin"
-        case score
     }
+}
+
+enum TypeEnum: String, Codable {
+    case organization = "Organization"
+    case user = "User"
 }

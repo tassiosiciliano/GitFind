@@ -11,7 +11,8 @@ import Alamofire
 
 class UserRequest {
     
-    static func getUsers(success: @escaping (_ user: [User]) -> Void,
+    // MARK: - Get Users List
+    static func getUsers(success: @escaping (_ user: [Users]) -> Void,
                          failure: @escaping () -> Void) {
         
         let url = "https://api.github.com/users"
@@ -19,24 +20,29 @@ class UserRequest {
         Alamofire.request(url, method: .get).responseJSON { (responseData: DataResponse <Any>) in
             if let error = responseData.error {
                 print("Error: " + error.localizedDescription)
-            } else if let user = try? JSONDecoder().decode([User].self, from: responseData.data!) {
-                success(user)
+            } else if let data = responseData.data {
+                if let user = try? JSONDecoder().decode([Users].self, from: data) {
+                    success(user)
+                }
             }
         }
     }
     
+    // MARK: - Get User by Login
     static func getUserByLogin(login: String?,
-                               success: @escaping (_ user: [User]) -> Void,
+                               success: @escaping (_ user: Users) -> Void,
                                failure: @escaping () -> Void) {
         
         if let userLogin = login {
+//            let url = "https://api.github.com/search/users?q=\(userLogin)"
             let url = "https://api.github.com/users/\(userLogin)"
-            
             Alamofire.request(url, method: .get).responseJSON { (responseData: DataResponse <Any>) in
                 if let error = responseData.error {
                     print("Error: " + error.localizedDescription)
-                } else if let user = try? JSONDecoder().decode([User].self, from: responseData.data!) {
-                    success(user)
+                } else if let data = responseData.data {
+                    if let user = try? JSONDecoder().decode(Users.self, from: data) {
+                        success(user)
+                    }
                 }
             }
         }

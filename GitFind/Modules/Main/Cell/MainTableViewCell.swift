@@ -32,8 +32,8 @@ class MainTableViewCell: UITableViewCell {
         avatarImage.clipsToBounds = true
     }
     
-    func setupCell(withUser user: User) {
-        let avatarUrl = URL(string: user.avatarURL)
+    func setupCell(withUser user: Users) {
+        let avatarUrl = URL(string: user.avatarURL ?? "")
         nameLabel.text = user.login
         avatarImage.kf.setImage(with: avatarUrl)
     }
