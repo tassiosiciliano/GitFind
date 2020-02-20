@@ -80,8 +80,13 @@ extension MainViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let login = searchBar.text {
-            self.presenter.getUserByLogin(login: login)
-            searchBar.resignFirstResponder()
+            if !login.isEmpty {
+                self.presenter.getUserByLogin(login: login)
+                searchBar.resignFirstResponder()
+            } else {
+                self.presenter.getUser()
+                searchBar.resignFirstResponder()
+            }
         }
     }
 }

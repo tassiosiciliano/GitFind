@@ -34,7 +34,6 @@ class UserRequest {
                                failure: @escaping () -> Void) {
         
         if let userLogin = login {
-//            let url = "https://api.github.com/search/users?q=\(userLogin)"
             let url = "https://api.github.com/users/\(userLogin)"
             Alamofire.request(url, method: .get).responseJSON { (responseData: DataResponse <Any>) in
                 if let error = responseData.error {
