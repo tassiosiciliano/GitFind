@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let main = MainViewController(nibName: "MainViewController", bundle: nil)
         let navigationController = UINavigationController(rootViewController: main)
+        if #available(iOS 13.0, *) {
+            navigationController.navigationBar.tintColor = UIColor.label
+        }
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()

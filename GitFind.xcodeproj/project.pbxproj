@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		839AB01AED5AA41B323FD6CC /* Pods_GitFind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E532BFF76B7F16899ECDBB90 /* Pods_GitFind.framework */; };
 		B841572022FE5C510065B5F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841571F22FE5C510065B5F4 /* AppDelegate.swift */; };
 		B841572722FE5C520065B5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B841572622FE5C520065B5F4 /* Assets.xcassets */; };
 		B841572A22FE5C520065B5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B841572822FE5C520065B5F4 /* LaunchScreen.storyboard */; };
@@ -26,12 +25,9 @@
 		B89C106E2304D3060025246F /* UserDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C106D2304D3060025246F /* UserDetailsPresenter.swift */; };
 		B89C10722304D5C40025246F /* UserDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C10702304D5C40025246F /* UserDetailsTableViewCell.swift */; };
 		B89C10732304D5C40025246F /* UserDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B89C10712304D5C40025246F /* UserDetailsTableViewCell.xib */; };
-		B8D2CFA923FE1B3200FEEFC9 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D2CFA323FE1B1B00FEEFC9 /* Kingfisher.framework */; };
-		B8D2CFAC23FE1B3400FEEFC9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D2CFA223FE1B1B00FEEFC9 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1B53C42BDC64626A64D97CBB /* Pods-GitFind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitFind.debug.xcconfig"; path = "Target Support Files/Pods-GitFind/Pods-GitFind.debug.xcconfig"; sourceTree = "<group>"; };
 		B841571C22FE5C510065B5F4 /* GitFind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitFind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B841571F22FE5C510065B5F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B841572622FE5C520065B5F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,10 +48,6 @@
 		B89C106D2304D3060025246F /* UserDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsPresenter.swift; sourceTree = "<group>"; };
 		B89C10702304D5C40025246F /* UserDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		B89C10712304D5C40025246F /* UserDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailsTableViewCell.xib; sourceTree = "<group>"; };
-		B8D2CFA223FE1B1B00FEEFC9 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8D2CFA323FE1B1B00FEEFC9 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD2082155BE4CEBB88EAC075 /* Pods-GitFind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitFind.release.xcconfig"; path = "Target Support Files/Pods-GitFind/Pods-GitFind.release.xcconfig"; sourceTree = "<group>"; };
-		E532BFF76B7F16899ECDBB90 /* Pods_GitFind.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitFind.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +55,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				839AB01AED5AA41B323FD6CC /* Pods_GitFind.framework in Frameworks */,
-				B8D2CFAC23FE1B3400FEEFC9 /* Alamofire.framework in Frameworks */,
-				B8D2CFA923FE1B3200FEEFC9 /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +67,6 @@
 				B841571E22FE5C510065B5F4 /* GitFind */,
 				B841571D22FE5C510065B5F4 /* Products */,
 				BF876E04FA76C60515B699E5 /* Pods */,
-				BD65EBD88EFBBF099C6C9311 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,21 +192,9 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		BD65EBD88EFBBF099C6C9311 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B8D2CFA223FE1B1B00FEEFC9 /* Alamofire.framework */,
-				B8D2CFA323FE1B1B00FEEFC9 /* Kingfisher.framework */,
-				E532BFF76B7F16899ECDBB90 /* Pods_GitFind.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		BF876E04FA76C60515B699E5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1B53C42BDC64626A64D97CBB /* Pods-GitFind.debug.xcconfig */,
-				CD2082155BE4CEBB88EAC075 /* Pods-GitFind.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -230,11 +206,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B841572E22FE5C520065B5F4 /* Build configuration list for PBXNativeTarget "GitFind" */;
 			buildPhases = (
-				643E5FD108B17C711D542B9F /* [CP] Check Pods Manifest.lock */,
 				B841571822FE5C510065B5F4 /* Sources */,
 				B841571922FE5C510065B5F4 /* Frameworks */,
 				B841571A22FE5C510065B5F4 /* Resources */,
-				4160B3CDF8416EF3B9526443 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -293,48 +267,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		4160B3CDF8416EF3B9526443 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GitFind/Pods-GitFind-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GitFind/Pods-GitFind-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitFind/Pods-GitFind-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		643E5FD108B17C711D542B9F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GitFind-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B841571822FE5C510065B5F4 /* Sources */ = {
@@ -421,7 +353,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -476,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -488,9 +420,9 @@
 		};
 		B841572F22FE5C520065B5F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B53C42BDC64626A64D97CBB /* Pods-GitFind.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W44FG7W243;
 				INFOPLIST_FILE = "$(SRCROOT)/GitFind/Application/Info.plist";
@@ -500,6 +432,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tassiosiciliano.GitFind;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -507,9 +440,9 @@
 		};
 		B841573022FE5C520065B5F4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD2082155BE4CEBB88EAC075 /* Pods-GitFind.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W44FG7W243;
 				INFOPLIST_FILE = "$(SRCROOT)/GitFind/Application/Info.plist";
@@ -519,6 +452,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tassiosiciliano.GitFind;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

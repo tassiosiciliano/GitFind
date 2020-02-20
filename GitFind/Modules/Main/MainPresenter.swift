@@ -18,7 +18,9 @@ class MainPresenter {
     func getUser() {
         UserRequest.getUsers(success: { (users) in
             self.userList = users
-            self.viewController?.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.viewController?.tableView.reloadData()
+            }
         }) {
             print("Error")
         }
@@ -27,7 +29,9 @@ class MainPresenter {
     func getUserByLogin(login: String) {
         UserRequest.getUserByLogin(login: login, success: { (users) in
             self.userList = [users]
-            self.viewController?.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.viewController?.tableView.reloadData()
+            }
         }) {
             print("Error")
         }

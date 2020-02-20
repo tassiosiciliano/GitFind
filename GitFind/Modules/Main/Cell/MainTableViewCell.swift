@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class MainTableViewCell: UITableViewCell {
     
@@ -33,8 +32,7 @@ class MainTableViewCell: UITableViewCell {
     }
     
     func setupCell(withUser user: Users) {
-        let avatarUrl = URL(string: user.avatarURL ?? "")
+//        let avatarUrl = URL(string: user.avatarURL ?? "")
         nameLabel.text = user.login
-        avatarImage.kf.setImage(with: avatarUrl)
     }
 }

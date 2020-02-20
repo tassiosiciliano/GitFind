@@ -6,7 +6,6 @@ target 'GitFind' do
   use_frameworks!
 
   # Pods for GitFind
-  pod 'Alamofire'
   pod 'Kingfisher'
 
 end

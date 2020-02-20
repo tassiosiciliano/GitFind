@@ -7,22 +7,29 @@
 //
 
 import Foundation
-import Alamofire
 
 class RepoRequest {
     
-    static func getRepos(url: String?,
-                         success: @escaping (_ repo: [Repo]) -> Void,
-                         failure: @escaping () -> Void) {
-        
-        if let repoUrl = url {
-            Alamofire.request(repoUrl, method: .get).responseJSON { response in
-                if let error = response.error {
-                    print("Error: " + error.localizedDescription)
-                } else if let repo = try? JSONDecoder().decode([Repo].self, from: response.data!) {
-                    success(repo)
+    static func getRepos(repoURL: String?,
+                               success: @escaping (_ user: [Repo]) -> Void,
+                               failure: @escaping () -> Void) {
+        if let repo = repoURL {
+            let url = URL(string: repo)!
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if let error = error {
+                    print("error: \(error)")
+                } else {
+                    if let response = response as? HTTPURLResponse {
+                        print("statusCode: \(response.statusCode)")
+                    }
+                    if let data = data {
+                        if let repo = try? JSONDecoder().decode([Repo].self, from: data) {
+                            success(repo)
+                        }
+                    }
                 }
             }
+            task.resume()
         }
     }
 }
