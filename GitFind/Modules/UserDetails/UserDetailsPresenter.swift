@@ -19,7 +19,9 @@ class UserDetailsPresenter {
         RepoRequest.getRepos(repoURL: url, success: { (repos) in
             self.repoList = repos
             if repos.isEmpty {
-                self.viewController?.showEmptyState()
+                DispatchQueue.main.async {
+                    self.viewController?.showEmptyState()
+                }
             }
             DispatchQueue.main.async {
                 self.viewController?.tableView.reloadData()

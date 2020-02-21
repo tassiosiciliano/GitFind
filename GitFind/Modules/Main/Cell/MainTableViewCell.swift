@@ -32,7 +32,11 @@ class MainTableViewCell: UITableViewCell {
     }
     
     func setupCell(withUser user: Users) {
-//        let avatarUrl = URL(string: user.avatarURL ?? "")
+        
         nameLabel.text = user.login
+        
+        if let avatarUrl = URL(string: user.avatarURL ?? "") {
+            self.avatarImage.load(url: avatarUrl)
+        }
     }
 }
