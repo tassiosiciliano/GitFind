@@ -16,12 +16,16 @@ class UserDetailsPresenter {
     
     // MARK: - METHODS
     func getRepos(url: String) {
-        RepoRequest.getRepos(url: url, success: { (repos) in
+        RepoRequest.getRepos(repoURL: url, success: { (repos) in
             self.repoList = repos
             if repos.isEmpty {
-                self.viewController?.showEmptyState()
+                DispatchQueue.main.async {
+                    self.viewController?.showEmptyState()
+                }
             }
-            self.viewController?.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.viewController?.tableView.reloadData()
+            }
         }) {
             print("Error")
         }

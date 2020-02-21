@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
 
     // MARK: - OUTLETS
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     // MARK: - PROPERTIES
     var presenter: MainPresenter
@@ -34,6 +35,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         setupNavigation()
+        setupSearchBar()
         self.presenter.getUser()
     }
     
@@ -42,6 +44,10 @@ class MainViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         MainTableViewCell.registerNib(for: tableView)
+    }
+    
+    func setupSearchBar() {
+        searchBar.delegate = self
     }
     
     func setupNavigation() {
@@ -65,6 +71,22 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let repoUrl = self.presenter.userList[indexPath.row].reposURL
         tableView.deselectRow(at: indexPath, animated: true)
-        self.navigationController?.pushViewController(UserDetailsViewController(url: repoUrl)!, animated: true)
+        self.navigationController?.pushViewController(UserDetailsViewController(url: repoUrl ?? "")!, animated: true)
+    }
+}
+
+// MARK: - SEARCHBAR DELEGATE
+extension MainViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let login = searchBar.text {
+            if !login.isEmpty {
+                self.presenter.getUserByLogin(login: login)
+                searchBar.resignFirstResponder()
+            } else {
+                self.presenter.getUser()
+                searchBar.resignFirstResponder()
+            }
+        }
     }
 }

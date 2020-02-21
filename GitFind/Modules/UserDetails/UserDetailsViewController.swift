@@ -53,8 +53,6 @@ class UserDetailsViewController: UIViewController {
     }
     
     func setupNavigation() {
-        let navigation = navigationController?.navigationBar
-        navigation?.tintColor = .black
         self.title = "Repositories"
         self.emptyStateLabel.isHidden = true
     }
